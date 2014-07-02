@@ -5,6 +5,7 @@
     <title>World App</title>
 </head>
 <body>
+<ol>
 <?php
 $connection = mysqli_connect("localhost", "traveller","secret", "world");
 
@@ -15,7 +16,11 @@ $q ="SELECT code, name
 
 $result = mysqli_query($connection, $q);
 while($row = mysqli_fetch_assoc($result)){
- echo print_r($row);
+ echo "<li>" .$row["name"] . "</li>";
 }
 
 ?>
+</ol>
+
+</body>
+</html>
