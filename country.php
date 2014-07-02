@@ -11,9 +11,10 @@ $connection = mysqli_connect("localhost", "traveller","secret", "world");
 
 //var_dump($connection); //verificamos que conecta
 
+$country = $_GET["country"];
 $q ="SELECT local_name, head_of_state
 FROM country
-Where code ='AUT'";
+Where code ='$country'";
 $result = mysqli_query($connection, $q);
 $row = mysqli_fetch_assoc($result);
 
