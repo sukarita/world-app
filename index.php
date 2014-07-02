@@ -16,7 +16,7 @@ $q ="SELECT code, name
 
 $result = mysqli_query($connection, $q);
 while($row = mysqli_fetch_assoc($result)){
- echo "<li>" .$row["name"] . "</li>";
+ echo "<li><a href=http://localhost/country.php?country=".$row["code"].">".$row["name"] . "</a></li>"; //revisar la construcción
 }
 
 ?>
