@@ -16,7 +16,7 @@ $q ="SELECT local_name,
             head_of_state,
             continent,
             region,
-            population,
+            country.population,
             city.name
     FROM country
     JOIN city ON city.id = country.capital
